@@ -66,7 +66,7 @@ export default function Home() {
               <div className={styles.largerTitle}>Doodlcorns Mint</div>
             </div>
             <div className={styles.inlineContainer}>
-              <div className={styles.largerTitle}>Modified by <b><i>Bobby Rabbits</i></b></div>
+              <div className={styles.smallerTitle}>Powered by <b><i>Bobby Rabbits</i></b></div>
             </div>
           </div>
         </div>
