@@ -9,7 +9,7 @@ const DEFAULT_GUARD_NAME = null;
 export const MintNFTs = ({ onClusterChange }) => {
   const allowList = [
     {
-      groupName: "OG",
+      groupName: "Use GEMs",
       wallets: [
       ],
     },
