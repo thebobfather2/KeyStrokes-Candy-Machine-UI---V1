@@ -25,9 +25,9 @@ import yT from '../public/images/yt.png'
 import Image from 'next/image';
 
 export default function Home() {
-  const [network, setNetwork] = useState(WalletAdapterNetwork.Devnet);
+  const [network, setNetwork] = useState(WalletAdapterNetwork.Mainnet);
 
-  const endpoint = useMemo(() => clusterApiUrl(network), [network]);
+  const endpoint = process.env.NEXT_PUBLIC_RPC_ENDPOINT
 
   const wallets = useMemo(
     () => [
@@ -52,7 +52,7 @@ export default function Home() {
         setNetwork(WalletAdapterNetwork.Testnet);
         break;
       default:
-        setNetwork(WalletAdapterNetwork.Devnet);
+        setNetwork(WalletAdapterNetwork.Mainnet);
         break;
     }
   };
@@ -65,20 +65,12 @@ export default function Home() {
     <div>
       <div className={styles.keystrokesContainer}>
         <div className={styles.inlineContainer}>
-          <div className={styles.imageContainer}>
-            <Image src={keyStrokes} alt="KeyStrokes"/>
-          </div>
           <div className={styles.simpleContainer}>
             <div className={styles.inlineContainer}>
-              <div className={styles.largerTitle}>Metaplex CandyMachine V3 UI</div>
+              <div className={styles.largerTitle}>Doodlcorns Mint</div>
             </div>
             <div className={styles.inlineContainer}>
-              <div className={styles.largerTitle}>Modified by <b><i>KeyStrokes</i></b></div>
-            </div>
-            <div className={`${styles.inlineContainer} ${styles.divAsLink}`} onClick={()=> window.open("https://www.youtube.com/@Key_Strokes?sub_confirmation=1", "_blank")}>
-              <div className={[styles.smallImageContainer]}>
-                <Image src={yT} alt="KeyStrokes YouTube"/>
-              </div>
+              <div className={styles.largerTitle}>Modified by <b><i>Bobby Rabbits</i></b></div>
             </div>
           </div>
         </div>

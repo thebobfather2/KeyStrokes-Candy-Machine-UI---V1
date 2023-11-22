@@ -445,9 +445,7 @@ export const MintNFTs = ({ onClusterChange }) => {
         <div className={styles.inlineContainer}>
           <h1 className={styles.title}>Network: </h1>
           <select onChange={onClusterChange} className={styles.dropdown}>
-            <option value="devnet">Devnet</option>
             <option value="mainnet">Mainnet</option>
-            <option value="testnet">Testnet</option>
           </select>
         </div>
         {
